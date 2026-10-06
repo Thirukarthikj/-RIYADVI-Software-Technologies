@@ -1,8 +1,9 @@
 'use client';
-import { useRef, useMemo } from 'react';
+import { useRef, useMemo, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Sparkles } from '@react-three/drei';
 import * as THREE from 'three';
+
 
 function TechOrb({ position, color = '#D4AF37', label, index }) {
   const meshRef = useRef();
@@ -84,12 +85,32 @@ function TechConstellation() {
 }
 
 export default function TechEcosystem() {
+
+  const containerRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { rootMargin: '100px 0px' }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="w-full h-[400px] md:h-[500px]">
+    <div ref={containerRef} className="w-full h-[400px] md:h-[500px]">
       <Canvas
         camera={{ position: [0, 0, 7], fov: 50 }}
-        dpr={[1, 1.5]}
-        gl={{ antialias: true, alpha: true }}
+        dpr={[1, 1.2]}
+        frameloop={isInView ? 'always' : 'never'}
+        gl={{ antialias: false, alpha: true, powerPreference: 'high-performance' }}
         style={{ background: 'transparent' }}
       >
         <ambientLight intensity={0.4} />
@@ -100,3 +121,4 @@ export default function TechEcosystem() {
     </div>
   );
 }
+

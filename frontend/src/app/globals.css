@@ -36,7 +36,7 @@
 /* Custom Utilities */
 @layer base {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 
   body {
@@ -44,6 +44,7 @@
     color: var(--color-neutral-100);
     font-family: var(--font-body);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
@@ -73,18 +74,19 @@
 @layer components {
   /* Glass effect */
   .glass {
-    background: rgba(26, 26, 46, 0.6);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(26, 26, 46, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(212, 175, 55, 0.1);
   }
 
   .glass-dark {
-    background: rgba(10, 10, 10, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(212, 175, 55, 0.08);
   }
+
 
   /* Gold gradient text */
   .text-gradient-gold {
