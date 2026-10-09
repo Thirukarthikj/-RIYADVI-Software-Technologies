@@ -1,9 +1,12 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { portfolio } from '@/data/siteData';
 import { SectionHeader, PortfolioCard } from '@/components/ui/SharedComponents';
+
+const GlassShowcase = dynamic(() => import('@/components/3d/GlassShowcase'), { ssr: false });
 
 export default function PortfolioPage() {
   const [filter, setFilter] = useState('All');
@@ -57,7 +60,7 @@ export default function PortfolioPage() {
                   <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div>
                       <span className="text-gold text-xs font-accent uppercase tracking-wider">{featured.industry}</span>
-                      <h2 className="font-heading font-black text-3xl md:text-4xl text-white uppercase mt-2">{featured.title}</h2>
+                      <h2 className="font-heading font-black text-3xl md:text-4xl text-neutral-100 uppercase mt-2">{featured.title}</h2>
                       <p className="text-neutral-400 mt-4 leading-relaxed">{featured.solution}</p>
                       <div className="flex gap-6 mt-6">
                         {featured.results.map((r, i) => (
@@ -74,8 +77,8 @@ export default function PortfolioPage() {
                         View Complete Case Study →
                       </Link>
                     </div>
-                    <div className="aspect-video bg-gradient-to-br from-dark-400 to-dark-600 rounded-xl flex items-center justify-center">
-                      <span className="text-6xl opacity-30">🧬</span>
+                    <div className="w-full">
+                      <GlassShowcase />
                     </div>
                   </div>
                 </motion.div>
@@ -114,7 +117,7 @@ export default function PortfolioPage() {
                 className="glass rounded-2xl p-8 text-center"
               >
                 <div className="font-heading font-black text-4xl text-gradient-gold">{stat.value}</div>
-                <h3 className="font-heading font-bold text-white mt-2">{stat.label}</h3>
+                <h3 className="font-heading font-bold text-neutral-100 mt-2">{stat.label}</h3>
                 <p className="text-neutral-400 text-sm mt-2">{stat.desc}</p>
               </motion.div>
             ))}
@@ -125,7 +128,7 @@ export default function PortfolioPage() {
       {/* CTA */}
       <section className="section-padding bg-dark-200">
         <div className="container-custom text-center">
-          <h2 className="font-heading font-black text-3xl md:text-4xl text-white uppercase">
+          <h2 className="font-heading font-black text-3xl md:text-4xl text-neutral-100 uppercase">
             Ready to Build Your Next{' '}
             <span className="text-gradient-gold">Breakthrough Product?</span>
           </h2>

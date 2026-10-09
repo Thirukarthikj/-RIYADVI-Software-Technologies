@@ -25,6 +25,18 @@ app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 // API routes
 app.use('/api', apiRoutes);
 
+// Root welcome / status route
+app.get('/', (req, res) => {
+  res.json({
+    message: '🚀 Riyadvi Software Technologies API Server is running',
+    frontend: process.env.CORS_ORIGIN || 'http://localhost:3000',
+    endpoints: {
+      health: '/health',
+      api: '/api',
+    },
+  });
+});
+
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });

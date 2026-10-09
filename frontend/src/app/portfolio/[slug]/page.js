@@ -1,9 +1,12 @@
 'use client';
 import { use } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { portfolio, services } from '@/data/siteData';
 import { SectionHeader, PortfolioCard } from '@/components/ui/SharedComponents';
+
+const GlassShowcase = dynamic(() => import('@/components/3d/GlassShowcase'), { ssr: false });
 
 export default function CaseStudyPage({ params }) {
   const { slug } = use(params);
@@ -12,7 +15,7 @@ export default function CaseStudyPage({ params }) {
   if (!project) {
     return (
       <div className="pt-32 pb-20 text-center container-custom">
-        <h1 className="font-heading font-black text-4xl text-white">Case Study Not Found</h1>
+        <h1 className="font-heading font-black text-4xl text-neutral-100">Case Study Not Found</h1>
         <Link href="/portfolio" className="btn-primary mt-8 inline-flex">Back to Portfolio</Link>
       </div>
     );
@@ -35,22 +38,22 @@ export default function CaseStudyPage({ params }) {
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="font-heading font-black text-4xl md:text-5xl text-white uppercase tracking-tight"
+                className="font-heading font-black text-4xl md:text-5xl text-neutral-100 uppercase tracking-tight"
               >
                 {project.title}
               </motion.h1>
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mt-4 flex flex-wrap gap-4">
-                <span className="text-neutral-400 text-sm"><strong className="text-white">Client:</strong> {project.client}</span>
-                <span className="text-neutral-400 text-sm"><strong className="text-white">Industry:</strong> {project.industry}</span>
+                <span className="text-neutral-400 text-sm"><strong className="text-neutral-100">Client:</strong> {project.client}</span>
+                <span className="text-neutral-400 text-sm"><strong className="text-neutral-100">Industry:</strong> {project.industry}</span>
               </motion.div>
             </div>
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
-              className="aspect-video bg-gradient-to-br from-dark-400 to-dark-600 rounded-2xl flex items-center justify-center"
+              className="w-full"
             >
-              <span className="text-6xl opacity-30">🏗️</span>
+              <GlassShowcase />
             </motion.div>
           </div>
         </div>
@@ -128,7 +131,7 @@ export default function CaseStudyPage({ params }) {
                   className="glass rounded-xl px-6 py-4 card-hover text-center"
                 >
                   <span className="text-2xl block mb-2">{service.icon}</span>
-                  <span className="text-sm text-white font-accent font-semibold">{service.shortTitle}</span>
+                  <span className="text-sm text-neutral-100 font-accent font-semibold">{service.shortTitle}</span>
                 </Link>
               ))}
             </div>
@@ -153,7 +156,7 @@ export default function CaseStudyPage({ params }) {
       {/* CTA */}
       <section className="section-padding">
         <div className="container-custom text-center">
-          <h2 className="font-heading font-black text-3xl md:text-4xl text-white uppercase">
+          <h2 className="font-heading font-black text-3xl md:text-4xl text-neutral-100 uppercase">
             Want Similar <span className="text-gradient-gold">Results?</span>
           </h2>
           <p className="text-neutral-400 mt-4 max-w-lg mx-auto">

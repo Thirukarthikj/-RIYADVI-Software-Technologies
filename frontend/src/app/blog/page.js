@@ -52,7 +52,7 @@ export default function BlogPage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search articles by title, topic, or technology..."
-              className="w-full px-5 py-4 pl-12 rounded-2xl bg-dark-200 border border-dark-400 text-white placeholder-neutral-500 focus:outline-none focus:border-gold transition-colors text-sm shadow-xl"
+              className="w-full px-5 py-4 pl-12 rounded-2xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 focus:outline-none focus:border-gold transition-colors text-sm shadow-sm"
             />
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400 text-lg">
               🔍
@@ -60,7 +60,7 @@ export default function BlogPage() {
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-white text-xs px-2 py-1 rounded bg-dark-400"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-neutral-800 text-xs px-2 py-1 rounded bg-dark-300"
               >
                 Clear
               </button>
@@ -75,8 +75,8 @@ export default function BlogPage() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-accent uppercase tracking-wider font-semibold transition-all ${
                   selectedCategory === cat
-                    ? 'bg-gold text-dark font-bold shadow-lg shadow-gold/20'
-                    : 'bg-dark-300 text-neutral-400 hover:text-white hover:bg-dark-400 border border-dark-400'
+                    ? 'bg-gold text-dark font-bold shadow-md'
+                    : 'bg-white text-neutral-400 hover:text-gold hover:bg-dark-200 border border-dark-400'
                 }`}
               >
                 {cat}
@@ -92,7 +92,7 @@ export default function BlogPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-dark-200 via-dark-300 to-dark-100 border border-gold/30 relative overflow-hidden group hover:border-gold/60 transition-all shadow-2xl"
+            className="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-white via-dark-200 to-white border border-gold/30 relative overflow-hidden group hover:border-gold/60 transition-all shadow-md"
           >
             <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
             <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -108,7 +108,7 @@ export default function BlogPage() {
               <span className="text-neutral-400 text-xs">{featuredPost.publishedAt}</span>
             </div>
 
-            <h2 className="text-2xl md:text-4xl font-heading font-black text-white group-hover:text-gold transition-colors mb-4 max-w-3xl leading-tight">
+            <h2 className="text-2xl md:text-4xl font-heading font-black text-neutral-100 group-hover:text-gold transition-colors mb-4 max-w-3xl leading-tight">
               <Link href={`/blog/${featuredPost.slug}`}>
                 {featuredPost.title}
               </Link>
@@ -124,7 +124,7 @@ export default function BlogPage() {
                   RT
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-white">{featuredPost.author}</div>
+                  <div className="text-xs font-bold text-neutral-100">{featuredPost.author}</div>
                   <div className="text-[10px] text-neutral-400">Engineering Staff</div>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function BlogPage() {
         {filteredPosts.length === 0 ? (
           <div className="text-center py-20 bg-dark-200/50 rounded-3xl border border-dark-500">
             <span className="text-4xl block mb-3">📰</span>
-            <h3 className="text-lg font-heading font-bold text-white mb-2">
+            <h3 className="text-lg font-heading font-bold text-neutral-100 mb-2">
               No articles found
             </h3>
             <p className="text-sm text-neutral-400 max-w-md mx-auto mb-6">
@@ -195,7 +195,7 @@ export default function BlogPage() {
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-bold text-xl text-white group-hover:text-gold transition-colors mb-3 leading-snug">
+                  <h3 className="font-heading font-bold text-xl text-neutral-100 group-hover:text-gold transition-colors mb-3 leading-snug">
                     <Link href={`/blog/${post.slug}`}>
                       {post.title}
                     </Link>
@@ -241,12 +241,12 @@ export default function BlogPage() {
 
       {/* Newsletter / CTA Section */}
       <section className="container-custom mt-20">
-        <div className="p-8 md:p-14 rounded-3xl bg-gradient-to-r from-dark-300 via-dark-200 to-dark-300 border border-gold/30 text-center relative overflow-hidden">
+        <div className="p-8 md:p-14 rounded-3xl bg-gradient-to-r from-dark-200 via-white to-dark-200 border border-gold/30 text-center relative overflow-hidden shadow-sm">
           <div className="max-w-2xl mx-auto relative z-10">
             <span className="text-xs font-accent font-bold uppercase tracking-widest text-gold mb-2 block">
               STAY AHEAD OF THE CURVE
             </span>
-            <h3 className="text-2xl md:text-3xl font-heading font-black text-white mb-4">
+            <h3 className="text-2xl md:text-3xl font-heading font-black text-neutral-100 mb-4">
               Get Architectural Insights & Tech Trends Delivered
             </h3>
             <p className="text-sm text-neutral-400 mb-8 leading-relaxed">
@@ -263,7 +263,7 @@ export default function BlogPage() {
                 type="email"
                 required
                 placeholder="Enter your executive email..."
-                className="flex-1 px-4 py-3 rounded-xl bg-dark-100 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold"
+                className="flex-1 px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold shadow-sm"
               />
               <button type="submit" className="btn-primary text-xs whitespace-nowrap !py-3 !px-6">
                 Subscribe Free

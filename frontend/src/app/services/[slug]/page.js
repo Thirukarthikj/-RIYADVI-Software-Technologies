@@ -4,7 +4,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { services, portfolio } from '@/data/siteData';
-import { SectionHeader, PortfolioCard } from '@/components/ui/SharedComponents';
+import { SectionHeader, PortfolioCard, ServiceCard } from '@/components/ui/SharedComponents';
 
 const ServiceScene = dynamic(() => import('@/components/3d/ServiceScene'), { ssr: false });
 
@@ -15,7 +15,7 @@ export default function ServiceDetailPage({ params }) {
   if (!service) {
     return (
       <div className="pt-32 pb-20 text-center container-custom">
-        <h1 className="font-heading font-black text-4xl text-white">Service Not Found</h1>
+        <h1 className="font-heading font-black text-4xl text-neutral-100">Service Not Found</h1>
         <Link href="/services" className="btn-primary mt-8 inline-flex">Back to Services</Link>
       </div>
     );
@@ -44,7 +44,7 @@ export default function ServiceDetailPage({ params }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="font-heading font-black text-3xl md:text-5xl text-white uppercase tracking-tight leading-tight"
+                className="font-heading font-black text-3xl md:text-5xl text-neutral-100 uppercase tracking-tight leading-tight"
               >
                 {service.title}
               </motion.h1>
@@ -109,7 +109,7 @@ export default function ServiceDetailPage({ params }) {
               className="glass rounded-2xl p-8"
             >
               <span className="tag mb-4 inline-block">The Challenge</span>
-              <h3 className="font-heading font-bold text-2xl text-white mb-4">Common Problems</h3>
+              <h3 className="font-heading font-bold text-2xl text-neutral-100 mb-4">Common Problems</h3>
               <ul className="space-y-3">
                 {[
                   'Legacy systems holding back business growth',
@@ -132,7 +132,7 @@ export default function ServiceDetailPage({ params }) {
               className="glass rounded-2xl p-8 border-gold/20"
             >
               <span className="tag mb-4 inline-block">Our Solution</span>
-              <h3 className="font-heading font-bold text-2xl text-white mb-4">How We Solve It</h3>
+              <h3 className="font-heading font-bold text-2xl text-neutral-100 mb-4">How We Solve It</h3>
               <ul className="space-y-3">
                 {service.features.slice(0, 4).map((feature, i) => (
                   <li key={i} className="flex items-start gap-3 text-neutral-400 text-sm">
@@ -197,7 +197,7 @@ export default function ServiceDetailPage({ params }) {
                 <span className="absolute top-4 right-4 font-heading font-black text-4xl text-dark-500">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <h4 className="font-heading font-bold text-white text-lg mb-2">{step.step}</h4>
+                <h4 className="font-heading font-bold text-neutral-100 text-lg mb-2">{step.step}</h4>
                 <p className="text-neutral-400 text-sm leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}
@@ -278,7 +278,7 @@ export default function ServiceDetailPage({ params }) {
       {/* CTA */}
       <section className="section-padding bg-dark-200">
         <div className="container-custom text-center">
-          <h2 className="font-heading font-black text-3xl md:text-4xl text-white uppercase">
+          <h2 className="font-heading font-black text-3xl md:text-4xl text-neutral-100 uppercase">
             Ready to Build Your{' '}
             <span className="text-gradient-gold">{service.shortTitle}</span> Solution?
           </h2>

@@ -105,7 +105,7 @@ export default function JobDetailPage({ params }) {
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-heading font-black text-white leading-tight mb-6">
+          <h1 className="text-3xl md:text-5xl font-heading font-black text-neutral-100 leading-tight mb-6">
             {job.title}
           </h1>
 
@@ -123,7 +123,7 @@ export default function JobDetailPage({ params }) {
             {/* Responsibilities */}
             {job.responsibilities && job.responsibilities.length > 0 && (
               <section className="p-8 rounded-3xl bg-dark-200 border border-dark-400">
-                <h3 className="text-xl font-heading font-bold text-white mb-6 flex items-center gap-3">
+                <h3 className="text-xl font-heading font-bold text-neutral-100 mb-6 flex items-center gap-3">
                   <span className="w-2.5 h-2.5 rounded-full bg-gold" />
                   Key Responsibilities
                 </h3>
@@ -141,7 +141,7 @@ export default function JobDetailPage({ params }) {
             {/* Requirements */}
             {job.requirements && job.requirements.length > 0 && (
               <section className="p-8 rounded-3xl bg-dark-200 border border-dark-400">
-                <h3 className="text-xl font-heading font-bold text-white mb-6 flex items-center gap-3">
+                <h3 className="text-xl font-heading font-bold text-neutral-100 mb-6 flex items-center gap-3">
                   <span className="w-2.5 h-2.5 rounded-full bg-gold" />
                   What We Look For (Requirements)
                 </h3>
@@ -159,7 +159,7 @@ export default function JobDetailPage({ params }) {
             {/* Benefits */}
             {job.benefits && job.benefits.length > 0 && (
               <section className="p-8 rounded-3xl bg-dark-200 border border-dark-400">
-                <h3 className="text-xl font-heading font-bold text-white mb-6 flex items-center gap-3">
+                <h3 className="text-xl font-heading font-bold text-neutral-100 mb-6 flex items-center gap-3">
                   <span className="w-2.5 h-2.5 rounded-full bg-gold" />
                   What We Offer
                 </h3>
@@ -183,7 +183,7 @@ export default function JobDetailPage({ params }) {
               <span className="text-xs font-accent font-bold uppercase tracking-widest text-gold mb-1 block">
                 DIRECT APPLICATION
               </span>
-              <h3 className="text-2xl font-heading font-black text-white mb-2">
+              <h3 className="text-2xl font-heading font-black text-neutral-100 mb-2">
                 Apply for this Role
               </h3>
               <p className="text-xs text-neutral-400 mb-6">
@@ -197,7 +197,7 @@ export default function JobDetailPage({ params }) {
                   className="p-8 rounded-2xl bg-dark-300 border border-gold text-center space-y-4"
                 >
                   <span className="text-5xl block">🎉</span>
-                  <h4 className="text-xl font-heading font-bold text-white">
+                  <h4 className="text-xl font-heading font-bold text-neutral-100">
                     Application Submitted!
                   </h4>
                   <p className="text-xs text-neutral-300 leading-relaxed">
@@ -234,7 +234,7 @@ export default function JobDetailPage({ params }) {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Jane Doe"
-                      className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
                     />
                   </div>
 
@@ -249,7 +249,7 @@ export default function JobDetailPage({ params }) {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="jane@example.com"
-                      className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
                     />
                   </div>
 
@@ -264,7 +264,7 @@ export default function JobDetailPage({ params }) {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+91 98765 43210"
-                      className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
                     />
                   </div>
 
@@ -279,7 +279,7 @@ export default function JobDetailPage({ params }) {
                         value={formData.portfolio}
                         onChange={handleChange}
                         placeholder="https://github.com/..."
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
                       />
                     </div>
                     <div>
@@ -292,7 +292,7 @@ export default function JobDetailPage({ params }) {
                         value={formData.linkedin}
                         onChange={handleChange}
                         placeholder="https://linkedin.com/in/..."
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
                       />
                     </div>
                   </div>
@@ -319,7 +319,7 @@ export default function JobDetailPage({ params }) {
                       value={formData.coverLetter}
                       onChange={handleChange}
                       placeholder="Brief note on your relevant experience..."
-                      className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors resize-none"
                     />
                   </div>
 

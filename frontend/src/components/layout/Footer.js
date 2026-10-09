@@ -45,7 +45,7 @@ export default function Footer() {
                 R
               </div>
               <div>
-                <span className="font-heading font-bold text-white text-sm tracking-wide">
+                <span className="font-heading font-bold text-neutral-100 text-sm tracking-wide">
                   RIYADVI
                 </span>
                 <span className="block text-[10px] text-neutral-400 tracking-[0.2em] uppercase">
@@ -74,7 +74,7 @@ export default function Footer() {
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h4 className="font-heading font-semibold text-white text-sm uppercase tracking-wider mb-6">
+              <h4 className="font-heading font-semibold text-neutral-100 text-sm uppercase tracking-wider mb-6">
                 {section.title}
               </h4>
               {section.isInfo ? (

@@ -66,7 +66,7 @@ export default function ServicesPage() {
                 className="glass rounded-2xl p-6 card-hover"
               >
                 <span className="text-gold text-xs font-accent font-semibold uppercase tracking-wider">{phase.phase}</span>
-                <h3 className="font-heading font-bold text-white text-lg mt-2 mb-3">{phase.title}</h3>
+                <h3 className="font-heading font-bold text-neutral-100 text-lg mt-2 mb-3">{phase.title}</h3>
                 <p className="text-neutral-400 text-sm leading-relaxed">{phase.desc}</p>
                 <span className="block text-3xl mt-4">{phase.icon}</span>
               </motion.div>
@@ -79,7 +79,7 @@ export default function ServicesPage() {
       <section className="section-padding bg-dark-200">
         <div className="container-custom">
           <div className="glass rounded-3xl p-8 md:p-16 text-center">
-            <h2 className="font-heading font-black text-3xl md:text-4xl text-white uppercase">
+            <h2 className="font-heading font-black text-3xl md:text-4xl text-neutral-100 uppercase">
               Configure Your <span className="text-gradient-gold">Engagement</span>
             </h2>
             <p className="text-neutral-400 mt-4 max-w-xl mx-auto">

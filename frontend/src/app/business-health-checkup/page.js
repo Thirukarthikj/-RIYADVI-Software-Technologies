@@ -114,7 +114,7 @@ export default function BusinessHealthCheckupPage() {
               <span className="px-4 py-1.5 rounded-full text-xs font-accent font-bold uppercase tracking-wider bg-gold text-dark inline-block">
                 Assessment Complete
               </span>
-              <h2 className="text-3xl md:text-4xl font-heading font-black text-white">
+              <h2 className="text-3xl md:text-4xl font-heading font-black text-neutral-100">
                 Digital Maturity Audit for {reportResult.company || reportResult.name}
               </h2>
               <p className="text-sm text-neutral-400 max-w-xl mx-auto">
@@ -123,7 +123,7 @@ export default function BusinessHealthCheckupPage() {
             </div>
 
             {/* Score Display Card */}
-            <div className="p-8 rounded-2xl bg-gradient-to-b from-dark-300 to-dark-100 border border-gold/30 flex flex-col sm:flex-row items-center justify-around gap-6 text-center sm:text-left">
+            <div className="p-8 rounded-2xl bg-gradient-to-b from-dark-200 via-white to-dark-200 border border-gold/30 flex flex-col sm:flex-row items-center justify-around gap-6 text-center sm:text-left shadow-sm">
               <div>
                 <div className="text-xs font-accent text-neutral-400 uppercase tracking-widest mb-1">
                   Overall Health Score
@@ -157,7 +157,7 @@ export default function BusinessHealthCheckupPage() {
 
             {/* Tailored Recommendations */}
             <div className="space-y-4">
-              <h3 className="text-lg font-heading font-bold text-white flex items-center gap-2">
+              <h3 className="text-lg font-heading font-bold text-neutral-100 flex items-center gap-2">
                 <span>⚡</span> Strategic Recommendations:
               </h3>
               <div className="space-y-3">
@@ -216,7 +216,7 @@ export default function BusinessHealthCheckupPage() {
                       <span className="text-xs font-accent text-gold uppercase tracking-wider font-bold">
                         Phase {currentStepIndex + 1}
                       </span>
-                      <h2 className="text-2xl font-heading font-black text-white">
+                      <h2 className="text-2xl font-heading font-black text-neutral-100">
                         {healthCheckupSteps[currentStepIndex].title}
                       </h2>
                     </div>
@@ -238,8 +238,8 @@ export default function BusinessHealthCheckupPage() {
                                 onClick={() => handleAnswerSelect(field.name, option)}
                                 className={`w-full p-4 rounded-xl text-left text-xs sm:text-sm font-body transition-all border flex items-center justify-between ${
                                   answers[field.name] === option
-                                    ? 'bg-gold/15 border-gold text-white font-semibold shadow-md'
-                                    : 'bg-dark-300 border-dark-400 text-neutral-300 hover:border-neutral-500'
+                                    ? 'bg-gold/15 border-gold text-neutral-100 font-semibold shadow-sm'
+                                    : 'bg-white border-dark-400 text-neutral-300 hover:border-gold/50 shadow-xs'
                                 }`}
                               >
                                 <span>{option}</span>
@@ -247,7 +247,7 @@ export default function BusinessHealthCheckupPage() {
                                   className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ml-3 ${
                                     answers[field.name] === option
                                       ? 'border-gold bg-gold text-dark text-[10px] font-bold'
-                                      : 'border-neutral-500'
+                                      : 'border-neutral-400'
                                   }`}
                                 >
                                   {answers[field.name] === option && '✓'}
@@ -263,7 +263,7 @@ export default function BusinessHealthCheckupPage() {
                             placeholder={field.placeholder}
                             value={answers[field.name] || ''}
                             onChange={(e) => handleAnswerSelect(field.name, e.target.value)}
-                            className="w-full px-4 py-3.5 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold"
+                            className="w-full px-4 py-3.5 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold shadow-sm"
                           />
                         )}
                       </div>
@@ -276,7 +276,7 @@ export default function BusinessHealthCheckupPage() {
                       type="button"
                       disabled={currentStepIndex === 0}
                       onClick={() => setCurrentStepIndex((prev) => prev - 1)}
-                      className="px-5 py-2.5 rounded-xl text-xs font-accent font-semibold text-neutral-400 hover:text-white disabled:opacity-30 disabled:pointer-events-none"
+                      className="px-5 py-2.5 rounded-xl text-xs font-accent font-semibold text-neutral-400 hover:text-neutral-900 disabled:opacity-30 disabled:pointer-events-none"
                     >
                       ← Previous
                     </button>
@@ -300,7 +300,7 @@ export default function BusinessHealthCheckupPage() {
                 >
                   <div className="text-center max-w-lg mx-auto">
                     <span className="text-3xl block mb-2">🎯</span>
-                    <h3 className="text-2xl font-heading font-black text-white mb-2">
+                    <h3 className="text-2xl font-heading font-black text-neutral-100 mb-2">
                       Where Should We Send Your Detailed Audit?
                     </h3>
                     <p className="text-xs text-neutral-400 leading-relaxed">
@@ -320,7 +320,7 @@ export default function BusinessHealthCheckupPage() {
                         value={contactInfo.name}
                         onChange={handleContactChange}
                         placeholder="Alex Morgan"
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white text-sm focus:outline-none focus:border-gold"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 text-sm focus:outline-none focus:border-gold shadow-sm"
                       />
                     </div>
 
@@ -335,7 +335,7 @@ export default function BusinessHealthCheckupPage() {
                         value={contactInfo.company}
                         onChange={handleContactChange}
                         placeholder="Nexus Enterprises"
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white text-sm focus:outline-none focus:border-gold"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 text-sm focus:outline-none focus:border-gold shadow-sm"
                       />
                     </div>
 
@@ -350,7 +350,7 @@ export default function BusinessHealthCheckupPage() {
                         value={contactInfo.email}
                         onChange={handleContactChange}
                         placeholder="alex@nexus.com"
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white text-sm focus:outline-none focus:border-gold"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 text-sm focus:outline-none focus:border-gold shadow-sm"
                       />
                     </div>
 
@@ -365,7 +365,7 @@ export default function BusinessHealthCheckupPage() {
                         value={contactInfo.phone}
                         onChange={handleContactChange}
                         placeholder="+91 81377 69939"
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white text-sm focus:outline-none focus:border-gold"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 text-sm focus:outline-none focus:border-gold shadow-sm"
                       />
                     </div>
 
@@ -373,7 +373,7 @@ export default function BusinessHealthCheckupPage() {
                       <button
                         type="button"
                         onClick={() => setCurrentStepIndex((prev) => prev - 1)}
-                        className="px-4 py-2 text-xs font-accent text-neutral-400 hover:text-white"
+                        className="px-4 py-2 text-xs font-accent text-neutral-400 hover:text-gold"
                       >
                         ← Back
                       </button>

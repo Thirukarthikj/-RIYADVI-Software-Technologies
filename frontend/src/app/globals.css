@@ -1,31 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Riyadvi Brand Colors */
-  --color-gold: #D4AF37;
-  --color-gold-light: #E8C547;
-  --color-gold-lighter: #F0D875;
-  --color-gold-dark: #B8941F;
-  --color-gold-muted: rgba(212, 175, 55, 0.15);
+  /* Riyadvi Brand Colors - Refined luxury gold for high contrast on light backgrounds */
+  --color-gold: #C59B27;
+  --color-gold-light: #D9AE38;
+  --color-gold-lighter: #ECD072;
+  --color-gold-dark: #A37910;
+  --color-gold-muted: rgba(197, 155, 39, 0.12);
 
-  --color-dark: #000000;
-  --color-dark-100: #0A0A0A;
-  --color-dark-200: #111111;
-  --color-dark-300: #1A1A1A;
-  --color-dark-400: #222222;
-  --color-dark-500: #2A2A2A;
-  --color-dark-600: #333333;
-  --color-dark-700: #444444;
+  /* Light Theme Surfaces */
+  --color-dark: #FFFFFF;
+  --color-dark-100: #FFFFFF;
+  --color-dark-200: #F8FAFC;
+  --color-dark-300: #F1F5F9;
+  --color-dark-400: #E2E8F0;
+  --color-dark-500: #CBD5E1;
+  --color-dark-600: #94A3B8;
+  --color-dark-700: #64748B;
 
-  --color-neutral-100: #F5F5F5;
-  --color-neutral-200: #E5E5E5;
-  --color-neutral-300: #CCCCCC;
-  --color-neutral-400: #999999;
-  --color-neutral-500: #666666;
-  --color-neutral-600: #4A4A4A;
+  /* Text & Content Hierarchy */
+  --color-neutral-100: #0F172A;
+  --color-neutral-200: #1E293B;
+  --color-neutral-300: #334155;
+  --color-neutral-400: #475569;
+  --color-neutral-500: #64748B;
+  --color-neutral-600: #94A3B8;
 
-  --color-navy: #1A1A2E;
-  --color-navy-light: #16213E;
+  --color-navy: #F8FAFC;
+  --color-navy-light: #F1F5F9;
 
   /* Font Families */
   --font-heading: 'Montserrat', sans-serif;
@@ -37,11 +39,13 @@
 @layer base {
   html {
     scroll-behavior: auto;
+    background-color: #FFFFFF;
+    color: #0F172A;
   }
 
   body {
-    background-color: var(--color-dark-100);
-    color: var(--color-neutral-100);
+    background-color: #FFFFFF;
+    color: var(--color-neutral-200);
     font-family: var(--font-body);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -49,7 +53,7 @@
 
   ::selection {
     background-color: var(--color-gold);
-    color: var(--color-dark);
+    color: #FFFFFF;
   }
 
   /* Custom scrollbar */
@@ -58,39 +62,58 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: var(--color-dark-200);
+    background: #F1F5F9;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--color-gold-dark);
+    background: var(--color-gold);
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-gold);
+    background: var(--color-gold-dark);
+  }
+
+  /* Heading & element override for crisp dark contrast */
+  .text-white {
+    color: #0F172A;
+  }
+
+  .hover\:text-white:hover {
+    color: #0F172A;
+  }
+
+  /* High contrast text on gold tags and badges */
+  .text-dark {
+    color: #0F172A !important;
+  }
+
+  .hover\:text-dark:hover {
+    color: #0F172A !important;
   }
 }
 
 @layer components {
   /* Glass effect */
   .glass {
-    background: rgba(26, 26, 46, 0.7);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
   }
 
   .glass-dark {
-    background: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(212, 175, 55, 0.08);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
   }
-
 
   /* Gold gradient text */
   .text-gradient-gold {
-    background: linear-gradient(135deg, #D4AF37, #F0D875, #D4AF37);
+    background: linear-gradient(135deg, #B8860B, #D4AF37, #A37910);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -98,23 +121,22 @@
 
   /* Glow effects */
   .glow-gold {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3),
-                0 0 60px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 4px 20px rgba(197, 155, 39, 0.25),
+                0 0 40px rgba(197, 155, 39, 0.1);
   }
 
   .glow-gold-sm {
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 2px 10px rgba(197, 155, 39, 0.2);
   }
 
   .text-glow-gold {
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5),
-                 0 0 40px rgba(212, 175, 55, 0.2);
+    text-shadow: 0 2px 10px rgba(197, 155, 39, 0.3);
   }
 
   /* Button styles */
   .btn-primary {
-    background: linear-gradient(135deg, #D4AF37, #B8941F);
-    color: #000000;
+    background: linear-gradient(135deg, #C59B27, #A37910);
+    color: #FFFFFF !important;
     font-weight: 700;
     padding: 0.75rem 2rem;
     border-radius: 0.5rem;
@@ -126,17 +148,20 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-size: 0.875rem;
+    box-shadow: 0 4px 14px rgba(197, 155, 39, 0.3);
   }
 
   .btn-primary:hover {
-    background: linear-gradient(135deg, #E8C547, #D4AF37);
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #D9AE38, #B8860B);
+    box-shadow: 0 6px 20px rgba(197, 155, 39, 0.4);
     transform: translateY(-2px);
+    color: #FFFFFF !important;
   }
 
   .btn-secondary {
-    border: 1px solid var(--color-gold);
-    color: var(--color-gold);
+    background: #FFFFFF;
+    border: 1.5px solid var(--color-gold);
+    color: var(--color-gold-dark) !important;
     font-weight: 600;
     padding: 0.75rem 2rem;
     border-radius: 0.5rem;
@@ -148,13 +173,14 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-size: 0.875rem;
-    background: transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   }
 
   .btn-secondary:hover {
-    background: rgba(212, 175, 55, 0.1);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    background: rgba(197, 155, 39, 0.08);
+    box-shadow: 0 4px 14px rgba(197, 155, 39, 0.2);
     transform: translateY(-2px);
+    color: var(--color-gold-dark) !important;
   }
 
   /* Section spacing */
@@ -187,9 +213,9 @@
   }
 
   .card-hover:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
-    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -10px rgba(197, 155, 39, 0.15), 0 8px 16px -4px rgba(0, 0, 0, 0.04);
+    border-color: rgba(197, 155, 39, 0.4);
   }
 
   /* Animated border */
@@ -203,7 +229,7 @@
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, #D4AF37, transparent, #D4AF37);
+    background: linear-gradient(135deg, #C59B27, transparent, #C59B27);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -216,20 +242,21 @@
     align-items: center;
     gap: 0.25rem;
     padding: 0.25rem 0.75rem;
-    background: rgba(212, 175, 55, 0.1);
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    background: rgba(197, 155, 39, 0.08);
+    border: 1px solid rgba(197, 155, 39, 0.25);
     border-radius: 9999px;
     font-size: 0.75rem;
-    color: var(--color-gold);
+    color: #A37910;
     font-family: var(--font-accent);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    font-weight: 600;
   }
 
   /* Animated line */
   .line-gold {
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, #C59B27, transparent);
   }
 
   /* Particle canvas container */
@@ -242,7 +269,7 @@
 
   /* Loading skeleton */
   .skeleton {
-    background: linear-gradient(90deg, var(--color-dark-400) 25%, var(--color-dark-500) 50%, var(--color-dark-400) 75%);
+    background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%);
     background-size: 200% 100%;
     animation: skeleton-loading 1.5s ease-in-out infinite;
   }
@@ -308,3 +335,24 @@
     animation: shimmer 3s ease-in-out infinite;
   }
 }
+
+/* Explicit high-priority overrides for light theme contrast */
+.text-white {
+  color: #0F172A !important;
+}
+
+.hover\:text-white:hover {
+  color: #0F172A !important;
+}
+
+.group:hover .group-hover\:text-gold,
+.hover\:text-gold:hover {
+  color: var(--color-gold) !important;
+}
+
+/* Ensure buttons with solid gold backgrounds keep white or black text as desired */
+.btn-primary,
+.btn-primary * {
+  color: #FFFFFF !important;
+}
+

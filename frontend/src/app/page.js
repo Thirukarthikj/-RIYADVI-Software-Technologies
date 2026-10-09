@@ -9,6 +9,7 @@ import { SectionHeader, StatCard, GoldDivider, ServiceCard, PortfolioCard } from
 // Dynamically import 3D components to avoid SSR issues
 const HeroScene = dynamic(() => import('@/components/3d/HeroScene'), { ssr: false });
 const TechEcosystem = dynamic(() => import('@/components/3d/TechEcosystem'), { ssr: false });
+const GlassShowcase = dynamic(() => import('@/components/3d/GlassShowcase'), { ssr: false });
 
 // ============ HERO SECTION ============
 function HeroSection() {
@@ -18,8 +19,8 @@ function HeroSection() {
       <HeroScene />
 
       {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark/40 via-transparent to-dark-100 z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-dark-100/80 to-transparent z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-dark/40 via-transparent to-dark-100 z-[1] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-dark-100/80 to-transparent z-[1] pointer-events-none" />
 
       {/* Content */}
       <div className="container-custom relative z-10 pt-32 pb-20">
@@ -38,7 +39,7 @@ function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="font-heading font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[0.95] uppercase tracking-tight"
+            className="font-heading font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-neutral-100 leading-[0.95] uppercase tracking-tight"
           >
             Custom Software &{' '}
             <span className="text-gradient-gold">Digital Solutions</span>{' '}
@@ -172,7 +173,7 @@ function TransformationSection() {
               {/* Content */}
               <div className={`ml-16 md:ml-0 md:w-1/2 ${i % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
                 <span className="text-gold font-accent font-bold text-sm">Step {step.step}</span>
-                <h3 className="font-heading font-bold text-xl text-white mt-1">{step.title}</h3>
+                <h3 className="font-heading font-bold text-xl text-neutral-100 mt-1">{step.title}</h3>
                 <p className="text-neutral-400 text-sm mt-2 leading-relaxed">{step.description}</p>
               </div>
             </motion.div>
@@ -282,7 +283,7 @@ function PortfolioPreview() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <span className="tag mb-4 inline-block">Featured Platinum Case Study</span>
-                <h3 className="font-heading font-black text-2xl md:text-3xl text-white uppercase">{featured.title}</h3>
+                <h3 className="font-heading font-black text-2xl md:text-3xl text-neutral-100 uppercase">{featured.title}</h3>
                 <p className="text-neutral-400 mt-4 leading-relaxed">{featured.challenge}</p>
                 <div className="flex gap-6 mt-6">
                   {featured.results.map((r, i) => (
@@ -302,8 +303,8 @@ function PortfolioPreview() {
                   </svg>
                 </Link>
               </div>
-              <div className="aspect-video bg-gradient-to-br from-dark-400 to-dark-600 rounded-xl flex items-center justify-center">
-                <span className="text-6xl opacity-30">🧬</span>
+              <div className="w-full">
+                <GlassShowcase />
               </div>
             </div>
           </motion.div>
@@ -356,7 +357,7 @@ function WhyRiyadvi() {
               className="glass rounded-2xl p-6 card-hover"
             >
               <span className="text-3xl mb-4 block">{reason.icon}</span>
-              <h3 className="font-heading font-bold text-white text-lg mb-2">{reason.title}</h3>
+              <h3 className="font-heading font-bold text-neutral-100 text-lg mb-2">{reason.title}</h3>
               <p className="text-neutral-400 text-sm leading-relaxed">{reason.desc}</p>
             </motion.div>
           ))}
@@ -364,7 +365,7 @@ function WhyRiyadvi() {
 
         {/* Timeline Preview */}
         <div className="mt-16">
-          <h3 className="font-heading font-bold text-xl text-white text-center mb-8">Our Engineering Trajectory</h3>
+          <h3 className="font-heading font-bold text-xl text-neutral-100 text-center mb-8">Our Engineering Trajectory</h3>
           <div className="flex flex-wrap justify-center gap-4 md:gap-8">
             {timeline.map((item, i) => (
               <motion.div
@@ -403,7 +404,7 @@ function CTASection() {
             viewport={{ once: true }}
           >
             <span className="tag mb-6 inline-block">Ready to Transform?</span>
-            <h2 className="font-heading font-black text-3xl md:text-5xl text-white uppercase tracking-tight">
+            <h2 className="font-heading font-black text-3xl md:text-5xl text-neutral-100 uppercase tracking-tight">
               Your Next Digital Move{' '}
               <span className="text-gradient-gold">Starts Here.</span>
             </h2>

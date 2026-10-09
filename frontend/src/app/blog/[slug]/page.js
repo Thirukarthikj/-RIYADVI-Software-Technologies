@@ -37,7 +37,7 @@ export default function BlogPostDetail({ params }) {
         return (
           <h2
             key={idx}
-            className="text-2xl md:text-3xl font-heading font-black text-white mt-10 mb-4 tracking-tight border-b border-dark-400 pb-3"
+            className="text-2xl md:text-3xl font-heading font-black text-neutral-100 mt-10 mb-4 tracking-tight border-b border-dark-400 pb-3"
           >
             {block.replace('## ', '')}
           </h2>
@@ -59,7 +59,7 @@ export default function BlogPostDetail({ params }) {
           <ol key={idx} className="list-decimal list-inside space-y-2 my-4 text-neutral-300">
             {items.map((item, i) => (
               <li key={i} className="leading-relaxed">
-                <span className="font-medium text-white">
+                <span className="font-medium text-neutral-100">
                   {item.replace(/^\d+\.\s*/, '')}
                 </span>
               </li>
@@ -125,7 +125,7 @@ export default function BlogPostDetail({ params }) {
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-heading font-black text-white leading-tight">
+          <h1 className="text-3xl md:text-5xl font-heading font-black text-neutral-100 leading-tight">
             {post.title}
           </h1>
 
@@ -140,7 +140,7 @@ export default function BlogPostDetail({ params }) {
                 RT
               </div>
               <div>
-                <div className="font-heading font-bold text-white text-sm">
+                <div className="font-heading font-bold text-neutral-100 text-sm">
                   {post.author}
                 </div>
                 <div className="text-xs text-neutral-400 font-accent">
@@ -164,7 +164,7 @@ export default function BlogPostDetail({ params }) {
 
       {/* Article Body */}
       <div className="container-custom max-w-3xl mx-auto py-10">
-        <div className="prose prose-invert max-w-none">
+        <div className="prose max-w-none">
           {renderContent(post.content)}
         </div>
 
@@ -191,7 +191,7 @@ export default function BlogPostDetail({ params }) {
         <div className="mt-8 flex justify-between items-center">
           <Link
             href="/blog"
-            className="text-xs font-accent font-semibold text-gold hover:text-white transition-colors inline-flex items-center gap-1"
+            className="text-xs font-accent font-semibold text-gold hover:text-neutral-100 transition-colors inline-flex items-center gap-1"
           >
             ← Back to all articles
           </Link>
@@ -211,7 +211,7 @@ export default function BlogPostDetail({ params }) {
             <span className="text-xs font-accent font-bold uppercase tracking-widest text-gold mb-2 block">
               CONTINUE READING
             </span>
-            <h3 className="text-2xl md:text-3xl font-heading font-black text-white">
+            <h3 className="text-2xl md:text-3xl font-heading font-black text-neutral-100">
               Related Articles & Engineering Guides
             </h3>
           </div>
@@ -227,7 +227,7 @@ export default function BlogPostDetail({ params }) {
                   <span className="text-[10px] uppercase font-accent font-bold text-gold px-2 py-0.5 rounded bg-dark-300 inline-block mb-3">
                     {related.category}
                   </span>
-                  <h4 className="font-heading font-bold text-white group-hover:text-gold transition-colors text-base mb-2">
+                  <h4 className="font-heading font-bold text-neutral-100 group-hover:text-gold transition-colors text-base mb-2">
                     {related.title}
                   </h4>
                   <p className="text-xs text-neutral-400 line-clamp-2 leading-relaxed">

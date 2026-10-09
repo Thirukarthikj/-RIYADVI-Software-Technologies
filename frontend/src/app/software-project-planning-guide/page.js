@@ -92,7 +92,7 @@ export default function SoftwareProjectPlanningGuidePage() {
           <div className="lg:col-span-7 space-y-8">
             {/* Guide Highlights */}
             <div className="p-8 rounded-3xl bg-dark-200 border border-dark-400">
-              <h3 className="text-xl font-heading font-bold text-white mb-6 flex items-center gap-3">
+              <h3 className="text-xl font-heading font-bold text-neutral-100 mb-6 flex items-center gap-3">
                 <span className="text-2xl">📘</span> What&apos;s Inside This Executive Guide:
               </h3>
               <div className="space-y-6">
@@ -102,7 +102,7 @@ export default function SoftwareProjectPlanningGuidePage() {
                       {ch.num}
                     </span>
                     <div>
-                      <h4 className="font-heading font-bold text-white text-base mb-1">
+                      <h4 className="font-heading font-bold text-neutral-100 text-base mb-1">
                         {ch.title}
                       </h4>
                       <p className="text-xs text-neutral-400 leading-relaxed font-body">
@@ -144,7 +144,7 @@ export default function SoftwareProjectPlanningGuidePage() {
                   <div className="w-16 h-16 rounded-full bg-gold/20 border border-gold mx-auto flex items-center justify-center text-3xl text-gold">
                     ⬇️
                   </div>
-                  <h3 className="text-2xl font-heading font-black text-white">
+                  <h3 className="text-2xl font-heading font-black text-neutral-100">
                     Access Unlocked!
                   </h3>
                   <p className="text-xs text-neutral-300 leading-relaxed">
@@ -179,7 +179,7 @@ export default function SoftwareProjectPlanningGuidePage() {
                   <span className="text-[10px] font-accent font-bold uppercase tracking-widest text-gold mb-1 block">
                     INSTANT PDF DOWNLOAD
                   </span>
-                  <h3 className="text-2xl font-heading font-black text-white mb-2">
+                  <h3 className="text-2xl font-heading font-black text-neutral-100 mb-2">
                     Claim Your Free Copy
                   </h3>
                   <p className="text-xs text-neutral-400 mb-6">
@@ -204,7 +204,7 @@ export default function SoftwareProjectPlanningGuidePage() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Sarah Connor"
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-400 text-sm focus:outline-none focus:border-gold shadow-sm"
                       />
                     </div>
 
@@ -219,7 +219,7 @@ export default function SoftwareProjectPlanningGuidePage() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="sarah@company.com"
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-400 text-sm focus:outline-none focus:border-gold shadow-sm"
                       />
                     </div>
 
@@ -234,7 +234,7 @@ export default function SoftwareProjectPlanningGuidePage() {
                           value={formData.company}
                           onChange={handleChange}
                           placeholder="Acme Inc"
-                          className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold"
+                          className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-400 text-sm focus:outline-none focus:border-gold shadow-sm"
                         />
                       </div>
                       <div>
@@ -247,7 +247,7 @@ export default function SoftwareProjectPlanningGuidePage() {
                           value={formData.role}
                           onChange={handleChange}
                           placeholder="CTO / Founder"
-                          className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold"
+                          className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-400 text-sm focus:outline-none focus:border-gold shadow-sm"
                         />
                       </div>
                     </div>
@@ -262,7 +262,7 @@ export default function SoftwareProjectPlanningGuidePage() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+91 81377 69939"
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-400 text-sm focus:outline-none focus:border-gold shadow-sm"
                       />
                     </div>
 

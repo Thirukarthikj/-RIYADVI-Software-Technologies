@@ -73,7 +73,7 @@ export default function AdminDashboardPage() {
                 COMMAND CENTER & LEAD OPS
               </span>
             </div>
-            <h1 className="text-2xl md:text-3xl font-heading font-black text-white mt-1">
+            <h1 className="text-2xl md:text-3xl font-heading font-black text-neutral-100 mt-1">
               Riyadvi Executive Admin Portal
             </h1>
           </div>
@@ -81,13 +81,13 @@ export default function AdminDashboardPage() {
           <div className="flex items-center gap-3">
             <button
               onClick={loadData}
-              className="px-4 py-2 rounded-xl bg-dark-300 hover:bg-dark-400 border border-dark-400 text-xs text-white font-accent transition-colors flex items-center gap-2"
+              className="px-4 py-2 rounded-xl bg-white hover:bg-dark-200 border border-dark-400 text-xs text-neutral-100 font-accent transition-colors flex items-center gap-2 shadow-sm"
             >
               <span>🔄</span> Refresh Data
             </button>
             <Link
               href="/"
-              className="px-4 py-2 rounded-xl bg-gold text-dark text-xs font-accent font-bold hover:bg-gold-light transition-colors"
+              className="px-4 py-2 rounded-xl bg-gold text-dark text-xs font-accent font-bold hover:bg-gold-light transition-colors shadow-sm"
             >
               Public Site →
             </Link>
@@ -100,14 +100,13 @@ export default function AdminDashboardPage() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           <div
             onClick={() => setActiveTab('consultations')}
-            className={`p-5 rounded-2xl bg-dark-200 border cursor-pointer transition-all ${
-              activeTab === 'consultations' ? 'border-gold bg-gold/10' : 'border-dark-400 hover:border-dark-300'
-            }`}
+            className={`p-5 rounded-2xl bg-dark-200 border cursor-pointer transition-all ${activeTab === 'consultations' ? 'border-gold bg-gold/10' : 'border-dark-400 hover:border-dark-300'
+              }`}
           >
             <div className="text-[11px] font-accent uppercase text-neutral-400 font-semibold">
               Consultations
             </div>
-            <div className="text-3xl font-heading font-black text-white mt-1">
+            <div className="text-3xl font-heading font-black text-neutral-100 mt-1">
               {stats.totalConsultations}
             </div>
             <div className="text-[10px] text-gold font-medium mt-1">High Intent Leads</div>
@@ -115,14 +114,13 @@ export default function AdminDashboardPage() {
 
           <div
             onClick={() => setActiveTab('contacts')}
-            className={`p-5 rounded-2xl bg-dark-200 border cursor-pointer transition-all ${
-              activeTab === 'contacts' ? 'border-gold bg-gold/10' : 'border-dark-400 hover:border-dark-300'
-            }`}
+            className={`p-5 rounded-2xl bg-dark-200 border cursor-pointer transition-all ${activeTab === 'contacts' ? 'border-gold bg-gold/10' : 'border-dark-400 hover:border-dark-300'
+              }`}
           >
             <div className="text-[11px] font-accent uppercase text-neutral-400 font-semibold">
               General Inquiries
             </div>
-            <div className="text-3xl font-heading font-black text-white mt-1">
+            <div className="text-3xl font-heading font-black text-neutral-100 mt-1">
               {stats.totalContacts}
             </div>
             <div className="text-[10px] text-neutral-400 mt-1">Direct Contact Form</div>
@@ -130,44 +128,41 @@ export default function AdminDashboardPage() {
 
           <div
             onClick={() => setActiveTab('healthCheckups')}
-            className={`p-5 rounded-2xl bg-dark-200 border cursor-pointer transition-all ${
-              activeTab === 'healthCheckups' ? 'border-gold bg-gold/10' : 'border-dark-400 hover:border-dark-300'
-            }`}
+            className={`p-5 rounded-2xl bg-dark-200 border cursor-pointer transition-all ${activeTab === 'healthCheckups' ? 'border-gold bg-gold/10' : 'border-dark-400 hover:border-dark-300'
+              }`}
           >
             <div className="text-[11px] font-accent uppercase text-neutral-400 font-semibold">
               Health Audits
             </div>
-            <div className="text-3xl font-heading font-black text-white mt-1">
+            <div className="text-3xl font-heading font-black text-neutral-100 mt-1">
               {stats.totalHealthCheckups}
             </div>
-            <div className="text-[10px] text-emerald-400 mt-1">Maturity Assessments</div>
+            <div className="text-[10px] text-emerald-600 mt-1">Maturity Assessments</div>
           </div>
 
           <div
             onClick={() => setActiveTab('leadMagnets')}
-            className={`p-5 rounded-2xl bg-dark-200 border cursor-pointer transition-all ${
-              activeTab === 'leadMagnets' ? 'border-gold bg-gold/10' : 'border-dark-400 hover:border-dark-300'
-            }`}
+            className={`p-5 rounded-2xl bg-dark-200 border cursor-pointer transition-all ${activeTab === 'leadMagnets' ? 'border-gold bg-gold/10' : 'border-dark-400 hover:border-dark-300'
+              }`}
           >
             <div className="text-[11px] font-accent uppercase text-neutral-400 font-semibold">
               Guide Downloads
             </div>
-            <div className="text-3xl font-heading font-black text-white mt-1">
+            <div className="text-3xl font-heading font-black text-neutral-100 mt-1">
               {stats.totalLeadMagnets}
             </div>
-            <div className="text-[10px] text-sky-400 mt-1">Blueprint Leads</div>
+            <div className="text-[10px] text-sky-600 mt-1">Blueprint Leads</div>
           </div>
 
           <div
             onClick={() => setActiveTab('applications')}
-            className={`p-5 rounded-2xl bg-dark-200 border cursor-pointer transition-all ${
-              activeTab === 'applications' ? 'border-gold bg-gold/10' : 'border-dark-400 hover:border-dark-300'
-            }`}
+            className={`p-5 rounded-2xl bg-dark-200 border cursor-pointer transition-all ${activeTab === 'applications' ? 'border-gold bg-gold/10' : 'border-dark-400 hover:border-dark-300'
+              }`}
           >
             <div className="text-[11px] font-accent uppercase text-neutral-400 font-semibold">
               Job Candidates
             </div>
-            <div className="text-3xl font-heading font-black text-white mt-1">
+            <div className="text-3xl font-heading font-black text-neutral-100 mt-1">
               {stats.totalApplications}
             </div>
             <div className="text-[10px] text-purple-400 mt-1">Engineering Talent</div>
@@ -187,11 +182,10 @@ export default function AdminDashboardPage() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2.5 rounded-xl text-xs font-accent font-semibold transition-all ${
-                activeTab === tab.id
-                  ? 'bg-gold text-dark font-bold'
-                  : 'bg-dark-300 text-neutral-400 hover:text-white'
-              }`}
+              className={`px-4 py-2.5 rounded-xl text-xs font-accent font-semibold transition-all ${activeTab === tab.id
+                ? 'bg-gold text-dark font-bold'
+                : 'bg-dark-300 text-neutral-400 hover:text-neutral-100'
+                }`}
             >
               {tab.label}
             </button>
@@ -208,7 +202,7 @@ export default function AdminDashboardPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Quick Status */}
             <div className="p-6 rounded-3xl bg-dark-200 border border-dark-400 space-y-4">
-              <h3 className="text-lg font-heading font-bold text-white flex items-center justify-between">
+              <h3 className="text-lg font-heading font-bold text-neutral-100 flex items-center justify-between">
                 <span>Recent Consultations & Bookings</span>
                 <button
                   onClick={() => setActiveTab('consultations')}
@@ -231,7 +225,7 @@ export default function AdminDashboardPage() {
                       className="p-4 rounded-xl bg-dark-300 border border-dark-400 hover:border-gold/40 cursor-pointer flex items-center justify-between transition-colors"
                     >
                       <div>
-                        <div className="font-heading font-bold text-sm text-white">{c.name}</div>
+                        <div className="font-heading font-bold text-sm text-neutral-100">{c.name}</div>
                         <div className="text-xs text-neutral-400">{c.email} • {c.company || 'Private Client'}</div>
                       </div>
                       <div className="text-right">
@@ -250,7 +244,7 @@ export default function AdminDashboardPage() {
 
             {/* Recent Candidates */}
             <div className="p-6 rounded-3xl bg-dark-200 border border-dark-400 space-y-4">
-              <h3 className="text-lg font-heading font-bold text-white flex items-center justify-between">
+              <h3 className="text-lg font-heading font-bold text-neutral-100 flex items-center justify-between">
                 <span>Recent Candidate Applications</span>
                 <button
                   onClick={() => setActiveTab('applications')}
@@ -273,7 +267,7 @@ export default function AdminDashboardPage() {
                       className="p-4 rounded-xl bg-dark-300 border border-dark-400 hover:border-gold/40 cursor-pointer flex items-center justify-between transition-colors"
                     >
                       <div>
-                        <div className="font-heading font-bold text-sm text-white">{app.name}</div>
+                        <div className="font-heading font-bold text-sm text-neutral-100">{app.name}</div>
                         <div className="text-xs text-neutral-400">{app.jobTitle || 'Role'} • {app.email}</div>
                       </div>
                       <div className="text-right">
@@ -294,7 +288,7 @@ export default function AdminDashboardPage() {
           /* Records Table for Selected Tab */
           <div className="p-6 rounded-3xl bg-dark-200 border border-dark-400">
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-dark-400">
-              <h3 className="text-lg font-heading font-bold text-white capitalize">
+              <h3 className="text-lg font-heading font-bold text-neutral-100 capitalize">
                 {activeTab} Records ({currentList.length})
               </h3>
               <span className="text-xs text-neutral-400">
@@ -325,7 +319,7 @@ export default function AdminDashboardPage() {
                         onClick={() => setSelectedRecord(item)}
                         className="hover:bg-dark-300/80 cursor-pointer transition-colors"
                       >
-                        <td className="py-3 px-4 font-bold text-white">
+                        <td className="py-3 px-4 font-bold text-neutral-100">
                           {item.name || item.fullName || 'Anonymous'}
                           {item.company && (
                             <div className="text-[11px] text-neutral-400 font-normal">
@@ -372,30 +366,30 @@ export default function AdminDashboardPage() {
 
       {/* Detail Modal */}
       {selectedRecord && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="w-full max-w-2xl bg-dark-200 border border-gold/40 rounded-3xl p-6 md:p-8 max-h-[85vh] overflow-y-auto shadow-2xl space-y-6"
+            className="w-full max-w-2xl bg-white border border-gold/40 rounded-3xl p-6 md:p-8 max-h-[85vh] overflow-y-auto shadow-2xl space-y-6"
           >
             <div className="flex items-center justify-between pb-4 border-b border-dark-400">
               <div>
                 <span className="text-[10px] font-accent uppercase text-gold font-bold">
                   RECORD INSPECTOR
                 </span>
-                <h3 className="text-xl font-heading font-black text-white">
+                <h3 className="text-xl font-heading font-black text-neutral-100">
                   {selectedRecord.name || 'Submission Payload'}
                 </h3>
               </div>
               <button
                 onClick={() => setSelectedRecord(null)}
-                className="w-8 h-8 rounded-full bg-dark-300 hover:bg-dark-400 text-white flex items-center justify-center text-sm"
+                className="w-8 h-8 rounded-full bg-dark-200 hover:bg-dark-300 text-neutral-600 hover:text-neutral-900 flex items-center justify-center text-sm"
               >
                 ✕
               </button>
             </div>
 
-            <div className="space-y-4 text-xs font-mono bg-dark-300 p-4 rounded-2xl border border-dark-400 overflow-x-auto text-neutral-300">
+            <div className="space-y-4 text-xs font-mono bg-dark-200 p-4 rounded-2xl border border-dark-400 overflow-x-auto text-neutral-800">
               <pre>{JSON.stringify(selectedRecord, null, 2)}</pre>
             </div>
 

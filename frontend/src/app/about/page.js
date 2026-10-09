@@ -33,7 +33,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <span className="tag mb-4 inline-block">Our Story</span>
-              <h3 className="font-heading font-bold text-2xl md:text-3xl text-white mb-4">
+              <h3 className="font-heading font-bold text-2xl md:text-3xl text-neutral-100 mb-4">
                 Founded With a Vision to{' '}
                 <span className="text-gradient-gold">Transform Businesses</span>
               </h3>
@@ -95,7 +95,7 @@ export default function AboutPage() {
                 className="glass rounded-2xl p-8 card-hover text-center"
               >
                 <span className="text-4xl mb-4 block">{item.icon}</span>
-                <h3 className="font-heading font-bold text-xl text-white mb-4">{item.title}</h3>
+                <h3 className="font-heading font-bold text-xl text-neutral-100 mb-4">{item.title}</h3>
                 <p className="text-neutral-400 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
@@ -135,7 +135,7 @@ export default function AboutPage() {
                   i % 2 === 0 ? 'md:mr-20 md:text-right' : 'md:ml-20'
                 }`}>
                   <span className="font-heading font-black text-3xl text-gradient-gold">{item.year}</span>
-                  <h3 className="font-heading font-bold text-lg text-white mt-2">{item.title}</h3>
+                  <h3 className="font-heading font-bold text-lg text-neutral-100 mt-2">{item.title}</h3>
                   <p className="text-neutral-400 text-sm mt-2 leading-relaxed">{item.description}</p>
                 </div>
               </motion.div>
@@ -160,7 +160,7 @@ export default function AboutPage() {
               className="glass rounded-2xl p-8 text-center glow-gold"
             >
               <span className="text-5xl mb-4 block">🏆</span>
-              <h3 className="font-heading font-bold text-xl text-white">Star of Excellence Award</h3>
+              <h3 className="font-heading font-bold text-xl text-neutral-100">Star of Excellence Award</h3>
               <p className="text-gold font-accent text-sm mt-2">National Integrity Cultural Academy — 2024</p>
               <p className="text-neutral-400 text-sm mt-4 leading-relaxed">
                 Recognized for outstanding contributions to technology innovation and digital excellence 
@@ -199,7 +199,7 @@ export default function AboutPage() {
                 className="glass rounded-xl p-6 card-hover"
               >
                 <span className="text-2xl mb-3 block">{item.icon}</span>
-                <h4 className="font-heading font-bold text-white mb-2">{item.title}</h4>
+                <h4 className="font-heading font-bold text-neutral-100 mb-2">{item.title}</h4>
                 <p className="text-neutral-400 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
@@ -210,7 +210,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="section-padding">
         <div className="container-custom text-center">
-          <h2 className="font-heading font-black text-3xl md:text-4xl text-white uppercase">
+          <h2 className="font-heading font-black text-3xl md:text-4xl text-neutral-100 uppercase">
             Ready to Partner With <span className="text-gradient-gold">Riyadvi?</span>
           </h2>
           <p className="text-neutral-400 mt-4 max-w-lg mx-auto">

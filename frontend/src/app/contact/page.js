@@ -121,7 +121,7 @@ export default function ContactPage() {
                   className={`flex-1 py-3 px-4 rounded-xl text-xs font-accent uppercase tracking-wider font-bold transition-all ${
                     activeTab === 'consultation'
                       ? 'bg-gold text-dark shadow-md'
-                      : 'text-neutral-400 hover:text-white'
+                      : 'text-neutral-500 hover:text-gold'
                   }`}
                 >
                   ⚡ Book Architecture Call
@@ -135,7 +135,7 @@ export default function ContactPage() {
                   className={`flex-1 py-3 px-4 rounded-xl text-xs font-accent uppercase tracking-wider font-bold transition-all ${
                     activeTab === 'message'
                       ? 'bg-gold text-dark shadow-md'
-                      : 'text-neutral-400 hover:text-white'
+                      : 'text-neutral-500 hover:text-gold'
                   }`}
                 >
                   ✉️ General Inquiry
@@ -151,7 +151,7 @@ export default function ContactPage() {
                   <div className="w-16 h-16 rounded-full bg-gold/20 border border-gold/50 mx-auto flex items-center justify-center text-3xl text-gold">
                     ✓
                   </div>
-                  <h3 className="text-2xl font-heading font-black text-white">
+                  <h3 className="text-2xl font-heading font-black text-neutral-100">
                     {activeTab === 'consultation'
                       ? 'Consultation Request Confirmed!'
                       : 'Message Successfully Sent!'}
@@ -198,7 +198,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="John Smith"
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
                       />
                     </div>
                     <div>
@@ -212,7 +212,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="john@company.com"
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
                       />
                     </div>
                   </div>
@@ -229,7 +229,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+91 81377 69939"
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
                       />
                     </div>
                     <div>
@@ -242,7 +242,7 @@ export default function ContactPage() {
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="Acme Corp"
-                        className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors"
                       />
                     </div>
                   </div>
@@ -258,7 +258,7 @@ export default function ContactPage() {
                             name="service"
                             value={formData.service}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white text-sm focus:outline-none focus:border-gold transition-colors"
+                            className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 text-sm focus:outline-none focus:border-gold transition-colors"
                           >
                             {services.map((s) => (
                               <option key={s.id} value={s.id}>
@@ -275,7 +275,7 @@ export default function ContactPage() {
                             name="budget"
                             value={formData.budget}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white text-sm focus:outline-none focus:border-gold transition-colors"
+                            className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 text-sm focus:outline-none focus:border-gold transition-colors"
                           >
                             <option value="<$5k">&lt; $5,000 (Starter / MVP)</option>
                             <option value="$5k - $15k">$5,000 – $15,000 (Growth)</option>
@@ -298,7 +298,7 @@ export default function ContactPage() {
                               className={`py-2 px-3 rounded-xl text-xs font-accent border text-center transition-all ${
                                 formData.timeline === time
                                   ? 'bg-gold/20 border-gold text-gold font-bold'
-                                  : 'bg-dark-300 border-dark-400 text-neutral-400 hover:text-white'
+                                  : 'bg-white border-dark-400 text-neutral-400 hover:text-gold'
                               }`}
                             >
                               {time}
@@ -326,7 +326,7 @@ export default function ContactPage() {
                           ? 'Share details about your current infrastructure, target features, goals...'
                           : 'Write your inquiry here...'
                       }
-                      className="w-full px-4 py-3 rounded-xl bg-dark-300 border border-dark-400 text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-dark-400 text-neutral-100 placeholder-neutral-500 text-sm focus:outline-none focus:border-gold transition-colors resize-none"
                     />
                   </div>
 
@@ -354,7 +354,7 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-6">
             {/* Direct Channels */}
             <div className="p-8 rounded-3xl bg-dark-200 border border-dark-400 space-y-6">
-              <h3 className="text-xl font-heading font-bold text-white flex items-center gap-2">
+              <h3 className="text-xl font-heading font-bold text-neutral-100 flex items-center gap-2">
                 <span>📍</span> Direct Headquarters
               </h3>
 
@@ -424,11 +424,11 @@ export default function ContactPage() {
             </div>
 
             {/* Health Checkup Banner */}
-            <div className="p-8 rounded-3xl bg-gradient-to-br from-gold/20 via-dark-200 to-dark-200 border border-gold/40 relative overflow-hidden">
+            <div className="p-8 rounded-3xl bg-gradient-to-br from-gold/15 via-white to-dark-200 border border-gold/40 relative overflow-hidden shadow-sm">
               <span className="text-[10px] font-accent font-bold uppercase tracking-widest text-gold mb-1 block">
                 COMPLIMENTARY EXECUTIVE TOOL
               </span>
-              <h4 className="text-lg font-heading font-bold text-white mb-2">
+              <h4 className="text-lg font-heading font-bold text-neutral-100 mb-2">
                 Need a full digital audit first?
               </h4>
               <p className="text-xs text-neutral-300 mb-4 leading-relaxed">
@@ -450,7 +450,7 @@ export default function ContactPage() {
             <span className="text-xs font-accent font-bold uppercase tracking-widest text-gold mb-2 block">
               FREQUENTLY ASKED QUESTIONS
             </span>
-            <h3 className="text-2xl md:text-3xl font-heading font-black text-white">
+            <h3 className="text-2xl md:text-3xl font-heading font-black text-neutral-100">
               Everything You Need to Know
             </h3>
           </div>
@@ -464,7 +464,7 @@ export default function ContactPage() {
                 <button
                   type="button"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full p-5 text-left flex items-center justify-between text-white font-heading font-bold text-sm hover:text-gold transition-colors"
+                  className="w-full p-5 text-left flex items-center justify-between text-neutral-100 font-heading font-bold text-sm hover:text-gold transition-colors"
                 >
                   <span>{faq.q}</span>
                   <span className="text-gold text-base ml-4">

@@ -107,7 +107,7 @@ export default function CareersPage() {
               className="p-8 rounded-3xl bg-dark-200 border border-dark-400 relative overflow-hidden"
             >
               <div className="w-8 h-1 bg-gold rounded-full mb-4" />
-              <h3 className="text-xl font-heading font-bold text-white mb-3">
+              <h3 className="text-xl font-heading font-bold text-neutral-100 mb-3">
                 {val.title}
               </h3>
               <p className="text-sm text-neutral-400 leading-relaxed font-body">
@@ -124,7 +124,7 @@ export default function CareersPage() {
           <span className="text-xs font-accent font-bold uppercase tracking-widest text-gold mb-2 block">
             WHY YOU WILL LOVE WORKING HERE
           </span>
-          <h2 className="text-2xl md:text-4xl font-heading font-black text-white">
+          <h2 className="text-2xl md:text-4xl font-heading font-black text-neutral-100">
             Comprehensive Benefits & Growth Acceleration
           </h2>
         </div>
@@ -139,7 +139,7 @@ export default function CareersPage() {
               className="p-6 rounded-2xl bg-dark-200/70 border border-dark-400/80 hover:border-gold/40 transition-all card-glow"
             >
               <span className="text-3xl block mb-4">{perk.icon}</span>
-              <h4 className="text-lg font-heading font-bold text-white mb-2">
+              <h4 className="text-lg font-heading font-bold text-neutral-100 mb-2">
                 {perk.title}
               </h4>
               <p className="text-xs text-neutral-400 leading-relaxed font-body">
@@ -157,7 +157,7 @@ export default function CareersPage() {
             <span className="text-xs font-accent font-bold uppercase tracking-widest text-gold mb-2 block">
               OPEN ROLES ({careers.length})
             </span>
-            <h2 className="text-2xl md:text-3xl font-heading font-black text-white">
+            <h2 className="text-2xl md:text-3xl font-heading font-black text-neutral-100">
               Explore Opportunities to Join Riyadvi
             </h2>
           </div>
@@ -171,7 +171,7 @@ export default function CareersPage() {
                 className={`px-4 py-2 rounded-xl text-xs font-accent uppercase tracking-wider font-semibold transition-all ${
                   selectedDept === dept
                     ? 'bg-gold text-dark font-bold shadow-lg shadow-gold/20'
-                    : 'bg-dark-300 text-neutral-400 hover:text-white border border-dark-400'
+                    : 'bg-white text-neutral-400 hover:text-gold hover:bg-dark-200 border border-dark-400'
                 }`}
               >
                 {dept}
@@ -207,7 +207,7 @@ export default function CareersPage() {
                   </span>
                 </div>
 
-                <h3 className="text-xl md:text-2xl font-heading font-bold text-white group-hover:text-gold transition-colors">
+                <h3 className="text-xl md:text-2xl font-heading font-bold text-neutral-100 group-hover:text-gold transition-colors">
                   <Link href={`/careers/${job.slug}`}>
                     {job.title}
                   </Link>
@@ -231,9 +231,9 @@ export default function CareersPage() {
         </div>
 
         {/* Open Application Card */}
-        <div className="mt-12 p-8 md:p-10 rounded-3xl bg-gradient-to-r from-dark-300 via-dark-200 to-dark-300 border border-gold/20 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-12 p-8 md:p-10 rounded-3xl bg-gradient-to-r from-dark-200 via-white to-dark-200 border border-gold/20 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div>
-            <h3 className="text-xl font-heading font-bold text-white mb-2">
+            <h3 className="text-xl font-heading font-bold text-neutral-100 mb-2">
               Don&apos;t see your dream role listed?
             </h3>
             <p className="text-sm text-neutral-400 max-w-xl">
